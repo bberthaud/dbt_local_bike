@@ -1,0 +1,30 @@
+models:
+- name: int_local_bike__order_items
+  description: This model consolidates order item details with corresponding order
+    information, providing a comprehensive view of each order item, including pricing,
+    quantity, and associated order metadata.
+  columns:
+  - name: order_id
+    description: Unique identifier for each order.
+  - name: order_item_id
+    description: Unique identifier for each item within an order.
+  - name: total_order_item_price
+    description: Total price for the order item.
+  - name: item_quantity
+    description: Quantity of the item ordered.
+  - name: product_id
+    description: Identifier for the product associated with the order item.
+  - name: customer_id
+    description: Identifier for the customer who placed the order.
+  - name: store_id
+    description: Identifier for the store where the order was placed.
+  - name: staff_id
+    description: Identifier for the staff member who handled the order.
+  - name: order_status
+    description: Current status of the order.
+  - name: order_created_at
+    description: Date when the order was created.
+  - name: order_required_at
+    description: Date by which the order is required to be fulfilled.
+  - name: order_shipped_at
+    description: Date when the order was shipped.

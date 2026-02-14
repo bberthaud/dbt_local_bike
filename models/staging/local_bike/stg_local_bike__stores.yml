@@ -11,15 +11,15 @@ models:
       - not_null
   - name: store_name
     description: The name of the store.
-  - name: phone
+  - name: store_phone
     description: The contact phone number for the store.
-  - name: email
+  - name: store_email
     description: The contact email address for the store.
-  - name: street
+  - name: store_street
     description: The street address of the store.
-  - name: city
+  - name: store_city
     description: The city where the store is located.
-  - name: state
+  - name: store_state
     description: The state where the store is located.
-  - name: zip_code
+  - name: store_zip_code
     description: The postal code for the store's location.
