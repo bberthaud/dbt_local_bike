@@ -1,0 +1,25 @@
+models:
+- name: stg_local_bike__stores
+  description: This model serves as a staging layer for local bike store data, providing
+    a clean and organized structure for downstream analysis. It includes essential
+    information about each store, such as contact details and location.
+  columns:
+  - name: store_id
+    description: A unique identifier for each store.
+    data_tests:
+      - unique
+      - not_null
+  - name: store_name
+    description: The name of the store.
+  - name: phone
+    description: The contact phone number for the store.
+  - name: email
+    description: The contact email address for the store.
+  - name: street
+    description: The street address of the store.
+  - name: city
+    description: The city where the store is located.
+  - name: state
+    description: The state where the store is located.
+  - name: zip_code
+    description: The postal code for the store's location.

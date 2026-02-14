@@ -1,0 +1,41 @@
+models:
+- name: stg_local_bike__order_items
+  description: This model serves as a staging layer for order items data from the local bike source. It prepares the data by selecting relevant fields such as order ID, item ID, product ID, quantity, list price, and discount, making it ready for further transformations or analysis.
+  columns:
+  - name: order_id
+    description: A unique identifier for each order.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: order_id
+            to: ref('stg_local_bike__orders')
+  - name: item_id
+    description: A unique identifier for each item within an order.
+    data_tests:
+      - not_null
+  - name: product_id
+    description: A unique identifier for each product associated with an item.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: product_id
+            to: ref('stg_local_bike__products')
+  - name: order_item_product_id
+    description: A unique identifier for each raw of the model order_item.
+    data_tests:
+      - not_null
+      - unique  
+  - name: quantity
+    description: The number of units of the product ordered.
+    data_tests:
+      - not_null
+  - name: list_price
+    description: The listed price of the product at the time of order.
+    data_tests:
+      - not_null
+  - name: discount
+    description: The discount applied to the product at the time of order.
+    data_tests:
+      - not_null

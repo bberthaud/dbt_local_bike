@@ -1,0 +1,40 @@
+models:
+- name: stg_local_bike__products
+  description: This model serves as a staging layer for product data from the local
+    bike source, providing a clean and consistent format for downstream analysis.
+    It includes details such as product identifiers, names, brand and category associations,
+    model year, and pricing information.
+  columns:
+  - name: product_id
+    description: A unique identifier for each product.
+    data_tests:
+      - unique
+      - not_null
+  - name: product_name
+    description: The name of the product.
+    data_tests:
+      - not_null
+  - name: brand_id
+    description: The identifier for the brand associated with the product.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: brand_id
+            to: ref('stg_local_bike__brands')
+  - name: category_id
+    description: The identifier for the category to which the product belongs.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: category_id
+            to: ref('stg_local_bike__categories')
+  - name: model_year
+    description: The year the product model was released.
+    data_tests:
+      - not_null
+  - name: list_price
+    description: The listed price of the product.
+    data_tests:
+      - not_null

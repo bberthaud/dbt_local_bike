@@ -1,0 +1,13 @@
+models:
+- name: stg_local_bike__categories
+  description: This model serves as a staging layer for the categories data from the local bike source. It selects and renames the relevant fields to ensure consistency and clarity for downstream analysis.
+  columns:
+  - name: category_id
+    description: A unique identifier for each category.
+    data_tests:
+      - unique
+      - not_null
+  - name: category_name
+    description: The name of the category.
+    data_tests:
+      - not_null

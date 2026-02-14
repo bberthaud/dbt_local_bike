@@ -1,0 +1,15 @@
+models:
+- name: stg_local_bike__brands
+  description: This model extracts and renames brand information from the local bike
+    source, providing a streamlined view of brand identifiers and names for further
+    analysis or reporting.
+  columns:
+  - name: brand_id
+    description: A unique identifier for each bike brand.
+    data_tests:
+      - unique
+      - not_null
+  - name: brand_name
+    description: The name of the bike brand.
+    data_tests:
+      - not_null

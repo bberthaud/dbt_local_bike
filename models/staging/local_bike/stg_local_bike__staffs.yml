@@ -1,0 +1,41 @@
+models:
+- name: stg_local_bike__staffs
+  description: This model serves as a staging layer for staff data from the local
+    bike source. It prepares and standardizes staff information for further analysis
+    and reporting.
+  columns:
+  - name: staff_id
+    description: A unique identifier for each staff member.
+    data_tests:
+      - unique
+      - not_null
+  - name: first_name
+    description: The first name of the staff member.
+    data_tests:
+      - not_null
+  - name: last_name
+    description: The last name of the staff member.
+    data_tests:
+      - not_null
+  - name: email
+    description: The email address of the staff member.
+    data_tests:
+      - not_null
+  - name: phone
+    description: The phone number of the staff member.
+  - name: active
+    description: Indicates whether the staff member is currently active.
+  - name: store_id
+    description: The identifier of the store where the staff member is employed.
+    data_tests:
+      - relationships:
+            arguments:
+              field: store_id
+              to: ref('stg_local_bike__stores')
+  - name: manager_id
+    description: The identifier of the staff member's manager.
+    data_tests:
+      - relationships:
+            arguments:
+              field: staff_id
+              to: ref('stg_local_bike__staffs')

@@ -1,0 +1,22 @@
+models:
+- name: stg_local_bike__stocks
+  description: This model provides a staging layer for local bike stock data, focusing
+    on the quantity of products available in different stores. It serves as a foundational
+    dataset for further analysis of inventory levels across various locations.
+  columns:
+  - name: store_id
+    description: The unique identifier for each store.
+    data_tests:
+      - not_null
+  - name: product_id
+    description: The unique identifier for each product.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: product_id
+            to: ref('stg_local_bike__products')
+  - name: quantity
+    description: The number of units available for each product in a store.
+    data_tests:
+      - not_null

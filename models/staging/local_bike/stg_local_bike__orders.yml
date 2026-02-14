@@ -1,0 +1,48 @@
+models:
+- name: stg_local_bike__orders
+  description: This model serves as a staging layer for local bike orders, providing
+    a clean and consistent dataset for downstream analysis. It includes key details
+    about each order, such as customer information, order status, and important dates
+    related to the order process.
+  columns:
+  - name: order_id
+    description: A unique identifier for each order.
+    data_tests:
+      - unique
+      - not_null
+  - name: customer_id
+    description: The identifier for the customer who placed the order.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: customer_id
+            to: ref('stg_local_bike__customers')
+  - name: order_status
+    description: The current status of the order.
+    data_tests:
+      - not_null
+  - name: order_date
+    description: The date when the order was placed.
+    data_tests:
+      - not_null
+  - name: required_date
+    description: The date by which the order is required to be delivered.
+  - name: shipped_date
+    description: The date when the order was shipped.
+  - name: store_id
+    description: The identifier for the store where the order was placed.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: store_id
+            to: ref('stg_local_bike__stores')
+  - name: staff_id
+    description: The identifier for the staff member who handled the order.
+    data_tests:
+      - not_null
+      - relationships:
+          arguments:
+            field: staff_id
+            to: ref('stg_local_bike__staffs')
