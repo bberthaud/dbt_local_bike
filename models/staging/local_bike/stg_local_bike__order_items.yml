@@ -22,12 +22,12 @@ models:
           arguments:
             field: product_id
             to: ref('stg_local_bike__products')
-  - name: order_item_product_id
+  - name: order_item_id
     description: A unique identifier for each raw of the model order_item.
     data_tests:
       - not_null
       - unique  
-  - name: quantity
+  - name: item_quantity
     description: The number of units of the product ordered.
     data_tests:
       - not_null
@@ -39,3 +39,5 @@ models:
     description: The discount applied to the product at the time of order.
     data_tests:
       - not_null
+  - name : total_order_item_price
+    description: The total price with the discount for the item of the order.

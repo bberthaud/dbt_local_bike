@@ -22,13 +22,16 @@ models:
     description: The current status of the order.
     data_tests:
       - not_null
-  - name: order_date
+      - accepted_values:
+          arguments:
+            values: [1, 2, 3, 4]
+  - name: order_created_at
     description: The date when the order was placed.
     data_tests:
       - not_null
-  - name: required_date
+  - name: order_required_at
     description: The date by which the order is required to be delivered.
-  - name: shipped_date
+  - name: order_shipped_at
     description: The date when the order was shipped.
   - name: store_id
     description: The identifier for the store where the order was placed.
