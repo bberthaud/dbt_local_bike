@@ -1,0 +1,27 @@
+models:
+- name: mrt_local_bike__stores
+  description: This model provides a comprehensive summary of store performance by
+    aggregating order data. It combines order details with store information to offer
+    insights into total income, item sales, and order counts for each store, organized
+    by the date of order creation.
+  columns:
+  - name: store_id
+    description: A unique identifier for each store.
+  - name: store_name
+    description: The name of the store.
+  - name: store_city
+    description: The city where the store is located.
+  - name: store_state
+    description: The state where the store is located.
+  - name: order_status
+    description: The current status of the order, such as pending, shipped, or completed.
+  - name: order_created_at
+    description: The date when the order was created.
+  - name: total_income
+    description: The total income generated from orders on a specific date.
+  - name: total_items
+    description: The total number of items sold in orders on a specific date.
+  - name: total_distinct_items
+    description: The total number of distinct items sold in orders on a specific date.
+  - name: total_orders
+    description: The total number of orders placed on a specific date.

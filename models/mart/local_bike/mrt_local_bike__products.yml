@@ -1,0 +1,24 @@
+models:
+- name: mrt_local_bike__products
+  description: This model provides a comprehensive view of product sales, combining
+    product details, category information, and brand data with sales metrics. It is
+    used to analyze product performance, sales trends, and inventory needs.
+  columns:
+  - name: product_id
+    description: A unique identifier for each product.
+  - name: product_name
+    description: The name of the product.
+  - name: category_name
+    description: The category to which the product belongs.
+  - name: brand_id
+    description: A unique identifier for the brand of the product.
+  - name: order_status
+    description: The current status of the order, such as pending, shipped, or completed.
+  - name: order_created_at
+    description: The date when the order was created.
+  - name: total_quantity
+    description: The total quantity of the product sold.
+  - name: total_product_income
+    description: The total income generated from the product sales.
+  - name: total_orders
+    description: The total number of orders that include the product.

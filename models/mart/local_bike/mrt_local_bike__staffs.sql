@@ -3,13 +3,14 @@ with
         select
             staff_id,
             store_id,
+            order_status,
             order_created_at,
             sum(total_order_price) as total_income,
             sum(total_items) as total_items,
             sum(total_distinct_items) as total_distinct_items,
             count(distinct order_id) as total_orders
         from {{ ref("mrt_local_bike__orders") }}
-        group by staff_id, store_id, order_created_at
+        group by staff_id, store_id, order_created_at, order_status
     )
 
 select
@@ -17,6 +18,7 @@ select
     sta.staff_name,
     o.store_id,
     sto.store_name,
+    o.order_status,
     o.order_created_at,
     o.total_income,
     o.total_items,

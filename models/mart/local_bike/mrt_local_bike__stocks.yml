@@ -1,0 +1,15 @@
+models:
+- name: mrt_local_bike__stocks
+  description: This model aggregates the stock quantities of products across different
+    stores and categories. It provides a summary of product availability by store
+    and category, which can be used for inventory management and sales analysis.
+  columns:
+  - name: store_id
+    description: Unique identifier for each store.
+  - name: store_name
+    description: Name of the store.
+  - name: category_name
+    description: Name of the product category.
+  - name: product_quantity
+    description: Total quantity of products available in the specified category and
+      store.

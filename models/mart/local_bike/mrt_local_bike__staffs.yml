@@ -1,0 +1,28 @@
+models:
+- name: mrt_local_bike__staffs
+  description: This model provides a comprehensive summary of staff performance and
+    store operations by aggregating order data. It includes details such as total
+    income, total items sold, and total orders processed by each staff member at each
+    store on a daily basis. This information is useful for analyzing staff productivity
+    and store performance.
+  columns:
+  - name: staff_id
+    description: Unique identifier for each staff member.
+  - name: staff_name
+    description: Name of the staff member.
+  - name: store_id
+    description: Unique identifier for each store.
+  - name: store_name
+    description: Name of the store.
+  - name: order_status
+    description: The current status of the order, such as pending, shipped, or completed.
+  - name: order_created_at
+    description: Date when the order was created.
+  - name: total_income
+    description: Total income generated from orders by the staff on a given day.
+  - name: total_items
+    description: Total number of items sold by the staff on a given day.
+  - name: total_distinct_items
+    description: Total number of distinct items sold by the staff on a given day.
+  - name: total_orders
+    description: Total number of orders processed by the staff on a given day.

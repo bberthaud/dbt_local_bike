@@ -1,0 +1,10 @@
+models:
+- name: int_local_bike__customer_favorite_product
+  description: This model identifies each customer's favorite product based on the
+    highest quantity of items ordered. It helps in understanding customer preferences
+    and can be used for targeted marketing and inventory management.
+  columns:
+  - name: customer_id
+    description: A unique identifier for each customer.
+  - name: favorite_product_id
+    description: The identifier of the product that a customer orders the most.

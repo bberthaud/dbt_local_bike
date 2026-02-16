@@ -1,0 +1,27 @@
+models:
+- name: mrt_local_bike__customers
+  description: This model provides a comprehensive view of customer activities and
+    preferences by aggregating order data and joining it with customer details and
+    favorite products. It helps in understanding customer spending behavior, order
+    frequency, and product preferences.
+  columns:
+  - name: customer_id
+    description: A unique identifier for each customer.
+  - name: customer_city
+    description: The city where the customer resides.
+  - name: customer_state
+    description: The state where the customer resides.
+  - name: order_status
+    description: The current status of the order, such as pending, shipped, or completed.
+  - name: order_created_at
+    description: The date when the order was created.
+  - name: total_price_spent
+    description: The total amount spent by the customer on orders.
+  - name: total_items
+    description: The total number of items purchased by the customer.
+  - name: total_distinct_items
+    description: The total number of distinct items purchased by the customer.
+  - name: total_orders
+    description: The total number of orders placed by the customer.
+  - name: favorite_product_id
+    description: The identifier of the customer's favorite product.
