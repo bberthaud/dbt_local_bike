@@ -1,0 +1,21 @@
+models:
+- name: int_local_bike__products
+  description: This model aggregates order item data by product, providing insights
+    into product sales performance. It includes total quantities sold, total income
+    generated from products, and the number of orders for each product, along with
+    key order dates.
+  columns:
+  - name: product_id
+    description: A unique identifier for each product.
+  - name: order_created_at
+    description: The date when the order was created.
+  - name: order_required_at
+    description: The date by which the order is required to be fulfilled.
+  - name: order_shipped_at
+    description: The date when the order was shipped.
+  - name: total_quantity
+    description: The total quantity of the product sold.
+  - name: total_product_income
+    description: The total income generated from the product sales.
+  - name: total_orders
+    description: The total number of orders that include the product.
