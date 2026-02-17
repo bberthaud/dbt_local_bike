@@ -3,6 +3,7 @@ select
     p.product_name,
     c.category_name,
     b.brand_id,
+    oi.store_id,
     oi.order_status,
     oi.order_created_at,
     oi.total_quantity,

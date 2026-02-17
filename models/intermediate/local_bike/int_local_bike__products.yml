@@ -7,6 +7,8 @@ models:
   columns:
   - name: product_id
     description: A unique identifier for each product.
+  - name: store_id
+    description: Identifier for the store where the order was placed.
   - name: order_created_at
     description: The date when the order was created.
   - name: order_required_at

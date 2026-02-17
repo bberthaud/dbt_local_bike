@@ -3,6 +3,7 @@ with
 
         select
             product_id,
+            store_id,
             order_status,
             order_created_at,
             order_required_at,
@@ -13,6 +14,7 @@ with
         from {{ ref("int_local_bike__order_items") }}
         group by
             product_id,
+            store_id,
             order_status,
             order_created_at,
             order_required_at,
@@ -22,6 +24,7 @@ with
 
 select
     oi.product_id,
+    oi.store_id,
     oi.order_status,
     oi.order_created_at,
     oi.order_required_at,
