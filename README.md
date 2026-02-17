@@ -13,13 +13,6 @@ The name Local Bike reflects the company’s community-centered origins. Alexand
 
 Local Bike goes beyond selling bicycles. The company actively builds communities around sustainable transportation and promotes a vision of a future where cycling is central to everyday American life.
 
-Since its creation, Local Bike has differentiated itself by prioritizing customer experience over scale. Its strategy is guided by three core values:
-
-* Personalization – Each customer receives a tailored consultation to find the bike that best fits their lifestyle, body type, and needs.
-* Quality – All bikes are built with premium materials and designed for durability, whether for commuting or leisure.
-* Community Engagement – The company regularly organizes local events, mechanics workshops, and group rides to bring cyclists together.
-
-Local Bike represents not just a business, but a movement toward healthier, more sustainable urban living.
 
 Local Bike has three stores: 
 
