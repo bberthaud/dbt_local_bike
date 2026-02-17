@@ -12,6 +12,8 @@ models:
     description: The category to which the product belongs.
   - name: brand_id
     description: A unique identifier for the brand of the product.
+  - name: store_id
+    description: Identifier for the store where the order was placed.
   - name: order_status
     description: The current status of the order, such as pending, shipped, or completed.
   - name: order_created_at
