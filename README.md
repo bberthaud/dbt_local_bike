@@ -21,6 +21,14 @@ Local Bike has three stores:
 * Rowlett, Texas: A fast-growing city near Dallas with strong potential for developing cycling culture.
 
 
-## Visualization
+## Dashboard
 
 The dashboard to gain insights is hosted on Metabase right [here](https://crude-lantern.metabaseapp.com/public/dashboard/66975d5a-5623-46e6-88d5-04a9a1c8d9ca).
+
+<img width="1078" height="439" alt="image" src="https://github.com/user-attachments/assets/2d7073f8-1a55-44d8-9353-4125935482f7" />
+
+<img width="1059" height="859" alt="image" src="https://github.com/user-attachments/assets/14392ef5-8fc7-45f8-a769-7f56c5fc7291" />
+
+<img width="1057" height="860" alt="image" src="https://github.com/user-attachments/assets/3a33f6b3-1ef8-4263-9f1d-a60405bc60e9" />
+
+
